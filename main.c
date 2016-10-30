@@ -3,7 +3,7 @@
 
 int main() {
 
-  printf("dtak");
+  printf("Test\n");
 
   return 0;
 }
