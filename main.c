@@ -20,6 +20,6 @@ int main() {
 
   printf("Hello World! I'm main thread.\n");
   pthread_exit(NULL);
-  
+
   return 0;
 }
