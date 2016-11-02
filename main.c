@@ -12,11 +12,17 @@ int main() {
 
   pthread_t threads[NUM_THREADS];
 
-  for (long i=0;i<NUM_THREADS;i++)
+  long i=0;
+  while (i<NUM_THREADS) {
     pthread_create(&threads[i], NULL, sayHello, (void *)i);
+    i++;
+  }
 
-  for (long i=0;i<NUM_THREADS;i++)
-      pthread_join(threads[i],NULL);
+  i=0;
+  while (i<NUM_THREADS) {
+    pthread_join(threads[i],NULL);
+    i++;
+  }
 
   printf("Hello World! I'm main thread.\n");
   pthread_exit(NULL);
